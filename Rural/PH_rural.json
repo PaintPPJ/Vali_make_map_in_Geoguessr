@@ -1,0 +1,36 @@
+{
+  "countryCodes": [
+    "PH"
+  ],
+  "distributionStrategy": {
+    "key": "FixedCountByMaxMinDistance",
+    "locationCountGoal": 102222,
+    "minMinDistance": 50,
+    "countryDistributionFromMap": "aarw",
+    "treatCountriesAsSingleSubdivision": ["IL,UG,AE,QA,TN,AD,CW,DO,GH,GL,JO,KG,LA,MK,MT,SN,SG,TW"]
+  },
+  "globalLocationFilter": "Buildings200 eq 0 and Roads200 eq 1",
+  "globalLocationPreferenceFilters": [
+    {
+      "expression": "Surface eq 'dirt' or Surface eq 'earth' or Surface eq 'fine_gravel' or Surface eq 'grass' or Surface eq 'gravel' or Surface eq 'ground' or Surface eq 'sand'",
+      "percentage": 30,
+      "locationTag": "dirty",
+      "minMinDistance": 500
+    },
+    {
+      "expression": "*",
+      "percentage": null,
+      "fill": true,
+      "locationTag": "fill"
+    }
+  ],
+  "panoIdCountryCodes": [],
+  "output": {
+    "locationTags": [
+      "Year",
+      "Month",
+      "Season",
+      "Elevation500"
+    ]
+  }
+}
